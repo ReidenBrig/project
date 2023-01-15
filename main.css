@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.to-up {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    display: none;
+    z-index: 22;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.triangle {
+    position: absolute;
+    z-index: -1;
+    width: 719.5px;
+    height: 626px;
+    left: -93px;
+    top: 15.5px;
+}
+
+.header-container {
+    position: relative;
+    margin-top: 59px;
+    width: 1110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Nunito';
+    font-style: normal;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 345px;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    color: #000000;
+}
+
+.basket {
+    width: 29px;
+    height: 29px;
+    margin-left: 113px;
+}
+
+.header-content {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer {
+    margin-right: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 167.4%;
+    /* or 59px */
+
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.subtitle {
+    margin-top: 32px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+}
+
+.btn {
+    margin-top: 32px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    background: #3C3C3C;
+    padding: 23px 60px;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+
+.image {
+    width: 634px;
+}
+
+.section {
+    width: 100%;
+    height: 2000px;
+    background-color: #3C3C3C;
+}
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 418px;
+    background-image: url(./img/footer.png);
+}
+
+.footer-container {
+    width: 1110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+    margin-right: 124px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.footer__link {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-right: 93px;
+    text-decoration: none;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-button {
+    cursor: pointer;
+    background: none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border: 1px solid #FFFFFF;
+}
+
+.footer-button:hover {
+    background-color: #3C3C3C;
+}
+
+
+.footer-tel {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 181.9%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-decoration: none;
+}
