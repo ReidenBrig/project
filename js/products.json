@@ -1,0 +1,22 @@
+json = `[
+    {
+        "id": 1,
+        "title": "Сумка Foxy",
+        "img": "products/bag/1.jpg",
+        "price": "70$"
+    },
+      {
+        "id": 2,
+        "title": "Бифолд Ebert",
+        "img": "products/bifold_ebert/1.jpg",
+        "price": "30$"
+
+    },
+      {
+        "id": 3,
+        "title": "Портмоне Ultra",
+        "img": "products/portmone/1.jpg",
+        "price": "50$"
+
+      }
+  ]`
