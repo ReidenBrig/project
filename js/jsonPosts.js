@@ -13,7 +13,6 @@ var products = JSON.parse(json);
         img.src = products[i].img;
         img.style.width = '300px';
         img.style.height = '300px';
-        img.style.borderRadius = '15px';
         p.innerHTML = products[i].price;
         
 
