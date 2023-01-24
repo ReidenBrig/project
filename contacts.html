@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="accordion.css" />
     <link rel="stylesheet" href="main.css" />
@@ -15,62 +15,133 @@
     />
 
     <title>KHULAP</title>
-    
-</head>
-<body>
+    <style>
+      .contacts {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+
+      }
+      .contacts-container {
+        width: 1110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .contacts-main {
+        width: 100%;
+      }
+
+      .contacts-adress {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .map {
+        width: 65%;
+      }
+      .adress {
+        width: 30%;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #000;
+      }
+
+      .form-feedback {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
     <div class="to-up">
-        <img src="icons/icon_top.png" alt="up" />
-      </div>
-      <header class="header">
-        <div class="header-container">
-          <div class="triangle">
-            <img src="img/triangle.png" alt="triangle" />
-          </div>
-          <nav class="menu" id="UP">
-            <nav class="logo">KHULAP</nav>
-            <nav class="links">
-              <a href="index.html" class="link">Главная</a>
-              <a href="accordion.html" class="link">О нас</a>
-              <a href="products.html" class="link">Каталог</a>
-              <a href="contacts.html" class="link">Контакты</a>
-            </nav>
-            <nav class="basket">
-              <a href="#">
-                <img src="icons/bi_bag-check.png" alt="basket" />
-              </a>
-            </nav>
-          </nav>
+      <img src="icons/icon_top.png" alt="up" />
+    </div>
+    <header class="header">
+      <div class="header-container">
+        <div class="triangle">
+          <img src="img/triangle.png" alt="triangle" />
         </div>
-      </header>
-
-
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-logo">
-            KHULAP
-          </div>
-          <nav class="footer-menu">
-            <a href="index.html" class="footer__link">Главная</a>
-            <a href="accordion.html" class="footer__link">О нас</a>
-            <a href="#" class="footer__link">Каталог</a>
-            <a href="#" class="footer__link">Контакты</a>
+        <nav class="menu" id="UP">
+          <nav class="logo">KHULAP</nav>
+          <nav class="links">
+            <a href="index.html" class="link">Главная</a>
+            <a href="accordion.html" class="link">О нас</a>
+            <a href="products.html" class="link">Каталог</a>
+            <a href="contacts.html" class="link">Контакты</a>
           </nav>
-          <nav class="footer-menu">
-            <a href="#" class="footer__link">Кошельки</a>
-            <a href="#" class="footer__link">Браслеты</a>
-            <a href="#" class="footer__link">Портмоне</a>
-            <a href="#" class="footer__link">Портупеи</a>
-          </nav>
-          <div class="footer-contacts">
-            <button class="footer-button">Заказать звонок</button>
-            <a class="footer-tel" href="tel:+375(33)3077852">+375(33)3077852</a>
-            <a class="footer-tel" href="mailto:khulap@gmail.com">
-              khulap@gmail.com
+          <nav class="basket">
+            <a href="#">
+              <img src="icons/bi_bag-check.png" alt="basket" />
             </a>
+          </nav>
+        </nav>
+      </div>
+    </header>
+
+    <section class="contacts">
+      <div class="contacts-container">
+        <div class="contacts-main">
+
+        <div class="contacts-adress">
+          <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A863f053521e3b9fa10738febbb325b0ea2408c666a3acae6a86701c460139ab1&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          <div class="adress">
+            Ул. Кожевническая 7с1
           </div>
         </div>
-      </footer>
-      <script src="js/accordion.js"></script>
-      <script src="js/toTop.js"></script>
-</body>
+      </div>
+      <form class="form-feedback" action="$">
+        <fieldset>
+          <legend>
+            Форма связи
+          </legend>
+          <input type="text" placeholder="Ваше имя">
+          <input type="email" placeholder="Ваш e-mail">
+          <input type="text" placeholder="Сообщение">
+          <button type="submit">Отправить</button>
+        </fieldset>
+      </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          KHULAP
+        </div>
+        <nav class="footer-menu">
+          <a href="index.html" class="footer__link">Главная</a>
+          <a href="accordion.html" class="footer__link">О нас</a>
+          <a href="#" class="footer__link">Каталог</a>
+          <a href="#" class="footer__link">Контакты</a>
+        </nav>
+        <nav class="footer-menu">
+          <a href="#" class="footer__link">Кошельки</a>
+          <a href="#" class="footer__link">Браслеты</a>
+          <a href="#" class="footer__link">Портмоне</a>
+          <a href="#" class="footer__link">Портупеи</a>
+        </nav>
+        <div class="footer-contacts">
+          <button class="footer-button">Заказать звонок</button>
+          <a class="footer-tel" href="tel:+375(33)3077852">+375(33)3077852</a>
+          <a class="footer-tel" href="mailto:khulap@gmail.com">
+            khulap@gmail.com
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/accordion.js"></script>
+    <script src="js/toTop.js"></script>
+  </body>
 </html>
