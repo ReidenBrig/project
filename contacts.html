@@ -13,56 +13,93 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
       rel="stylesheet"
     />
-
-    <title>KHULAP</title>
     <style>
-      .contacts {
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-
-      }
-      .contacts-container {
-        width: 1110px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .contacts-main {
-        width: 100%;
+      .modal {
+        display: none; /* Скрыто по умолчанию */
+        position: fixed; /* Оставаться на месте */
+        z-index: 1; /* Сидеть на вершине */
+        padding-top: 100px; /* Расположение коробки */
+        left: 0;
+        top: 0;
+        width: 100%; /* Полная ширина */
+        height: 100%; /* Полная высота */
+        overflow: auto; /* Включите прокрутку, если это необходимо */
+        background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+        background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
       }
 
-      .contacts-adress {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .map {
-        width: 65%;
-      }
-      .adress {
-        width: 30%;
-        font-family: 'Nunito';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        text-align: center;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: #000;
-      }
+/* Модальное содержание */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 600px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
 
-      .form-feedback {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-      }
+/* Добавить анимацию */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Кнопка закрытия */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  font-family: 'Nunito';
+    font-style: normal;
+  padding: 20px 16px;
+  background-color: #3C3C3C;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+
+}
+
+.modal-body {
+  font-family: 'Nunito';
+    font-style: normal;
+  color: #000;
+    text-align: center;
+    font-size: 32px;
+
+  padding: 50px 50px;
+}
+
+</style>
     </style>
+    <title>KHULAP</title>
+    <link rel="stylesheet" href="contacts.css">
   </head>
   <body>
+
+    
+
     <div class="to-up">
       <img src="icons/icon_top.png" alt="up" />
     </div>
@@ -101,18 +138,36 @@
           </div>
         </div>
       </div>
-      <form class="form-feedback" action="$">
-        <fieldset>
-          <legend>
+      <form name="form-feedback" class="form-feedback" action="#">
+        <fieldset class="contacts_form">
+          <legend class="form">
             Форма связи
           </legend>
-          <input type="text" placeholder="Ваше имя">
-          <input type="email" placeholder="Ваш e-mail">
-          <input type="text" placeholder="Сообщение">
-          <button type="submit">Отправить</button>
+          <div class="data-client">
+            <input name="userName" class="data-client_input userName" type="text" placeholder="Ваше имя">
+            <input name="userEmail" class="data-client_input userEmail" type="email" placeholder="Ваш e-mail">
+            <input name="userMassage" class="data-client_input userMassage" type="text" placeholder="Сообщение">
+          </div>
+          <button class="data-client_btn" type="submit" >Отправить</button>
         </fieldset>
       </form>
       </div>
+<!-- MODAL WINDOW -->
+      <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Сообщение отправлено</h2>
+          </div>
+          <div class="modal-body">
+            <p>Мы c Вами свяжемся в течении дня!</p>
+          </div>
+          
+        </div>
+      
+      </div>
+
     </section>
 
     <footer class="footer">
@@ -143,5 +198,73 @@
     </footer>
     <script src="js/accordion.js"></script>
     <script src="js/toTop.js"></script>
+
+    <script>
+      
+      function DataUser(name, email, message) {
+        this.name = name;
+        this.email = email;
+        this.message = message;
+      }
+
+      let modal = document.getElementById("myModal");
+      let form = document.querySelector('form');
+      // form.addEventListener('submit', formSend);
+      form.addEventListener('submit', function() {
+        modal.style.display = "block";
+
+        let userName = document.querySelector('.userName').value;
+        let userEmail = document.querySelector('.userEmail').value;
+        let userMassage = document.querySelector('.userMassage').value;
+        let dataUser = new DataUser(userName, userEmail, userMassage);
+        console.log(dataUser);
+
+        /* let formData = new FormData(document.form.form-feedback);
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/url")
+        xhr.send(formData); */
+
+        /* let xhr = new XMLHttpRequest();
+
+        let json = JSON.stringify ({
+          userName: userName,
+          userEmail: userEmail,
+          userMassage: userMassage
+        })
+        xhr.open("POST", "/submit", true),
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        xhr.send(json); 
+*/
+/* 
+ var form = document.querySelector('form');
+
+var params = new FormData(form); 
+
+fetch('/url', {
+   method: 'POST',
+   body: params
+}); */
+
+
+
+
+        
+
+      })
+
+        let close = document.getElementsByClassName("close"); 
+
+        close.onclick = function() {
+          modal.style.display = "none";
+        }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }  
+
+    </script>
   </body>
 </html>

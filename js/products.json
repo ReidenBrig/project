@@ -18,5 +18,27 @@ json = `[
         "img": "products/portmone/1.jpg",
         "price": "50$"
 
+      },
+      {
+        "id": 4,
+        "title": "Сумка Banan",
+        "img": "products/banan/1.jpg",
+        "price": "100$"
+
+      },
+      {
+        "id": 5,
+        "title": "Бифолд Mini",
+        "img": "products/bifold_mini/1.jpg",
+        "price": "30$"
+
+      },
+      {
+        "id": 6,
+        "title": "Портмоне Stash",
+        "img": "products/portmone2/1.jpg",
+        "price": "30$"
+
       }
+      
   ]`
