@@ -15,7 +15,9 @@ var products = JSON.parse(json);
         img.style.height = '300px';
         p.innerHTML = products[i].price;
         
-
+        div.style.paddingBottom = '20px';
+        h3.style.fontSize = '24px';
+        p.style.fontSize = '18px';
         
         div.appendChild(img);
         div.appendChild(h3);
